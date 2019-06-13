@@ -15,7 +15,6 @@ class Cards
       when 1 then 11
       when 2..10 then value
       when 11..13 then 10
-      end
     end
   end
 
@@ -26,7 +25,6 @@ class Cards
       when "12" then "Queen"
       when "13" then "King"
       when 2..10 then @rank
-      end
     end
   end
 
