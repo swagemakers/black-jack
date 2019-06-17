@@ -21,3 +21,4 @@ class Main_player
       sum += card.value
     end
   end
+end
