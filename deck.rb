@@ -1,19 +1,25 @@
 require_relative 'cards.rb'
 
 class Deck
-  attr_accessor :cards
+attr_reader :cards
 
   def initialize
-    @cards = []
-    create_deck!
+    @cards = Deck.build_cards
+    #create_deck!
   end
 
-  def create_deck!
-    cards.SUIT.each do |suit|
-      cards.RANK.each do |rank|
-        @cards << Cards.new(suit, rank)
+  def self.build_cards
+    cards = []
+    SUIT.each do |suit|
+      (2..10).each do |number|
+        cards << Cards.new(suit, number)
+      end
+      ["J", "Q", "K", "A"].each do |facecard|
+        cards << Cards.new(suit, facecard)
       end
     end
-    @cards.shuffle!
+    cards.shuffle
   end
+
+
 end
