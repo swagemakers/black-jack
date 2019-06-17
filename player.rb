@@ -1,18 +1,9 @@
-require_relative 'cards.rb'
-
-class Player
-
-  attr_accessor :cards, :bank
-  attr_reader :name, :points
+class Player < Main_player
+  attr_accessor :cards, :bank, :points
+  attr_reader :name
 
   def initialize(name)
     @name = name
-    @cards = []
-    @bank = 100
-  end
-
-  def obtaining_points
-    @points = 0
-    @cards.each { |card| @points += cards.value }
+    super
   end
 end
