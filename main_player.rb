@@ -13,7 +13,7 @@ class Main_player
   end
 
   def get_card(deck)
-    @cards << deack.cards.pop
+    @cards << deck.cards.pop
   end
 
   def value
