@@ -2,23 +2,21 @@ require_relative 'cards.rb'
 require_relative 'deck.rb'
 
 class Main_player
-  attr_accessor :cards, :bank, :points
+  attr_accessor :cards, :bank, :value
   attr_reader :name
 
   def initialize(name)
     @name = name
-    @cards = []
     @bank = 100
-    @points = 0
+    @value = 0
+    @cards = []
   end
 
-  def get_card(deck)
-    @cards << deck.cards.pop
-  end
-
-  def value
-    cards.inject(0) do |sum, card|
-      sum += card.value
-    end
-  end
+#does not work the way i expect it to
+#can't use inject on nil object
+#  def value
+#    cards.inject(0) do |sum, card|
+#      sum += card.value
+#    end
+#  end
 end
