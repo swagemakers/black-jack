@@ -4,6 +4,8 @@ class Player < Main_player
 
   def initialize(name)
     @name = name
+    @value = value
+    @cards = []
     super
   end
 end
