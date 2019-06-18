@@ -5,7 +5,7 @@ attr_reader :cards
 
   def initialize
     @cards = Deck.build_cards
-    #create_deck!
+    #create deck? or not
   end
 
   def self.build_cards
