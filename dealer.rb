@@ -7,6 +7,8 @@ class Dealer < Main_player
 
   def initialize(name = DEALER)
     @name = DEALER
+    @value = value
+    @cards = []
     super
   end
 end
