@@ -1,13 +1,15 @@
-RANK = ['Ace', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'Jack', 'Queen', 'King']
-SUIT = ['Hearts', 'Spades', 'Diamonds', 'Clubs']
 class Cards
+
+SUITS = ['♠', '♥', '♦', '♣'].freeze
+RANKS = [*(2..10), 'J', 'K', 'Q', 'A'].freeze
 
   attr_reader :rank, :suit
   attr_accessor :value
 
   def initialize(suit, value)
     @suit = suit
-    @value = value
+    @rank = rank
+    @value = card_value
   end
 
   def card_value
