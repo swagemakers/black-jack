@@ -1,3 +1,4 @@
+class Cards
 SUITS = ['♠', '♥', '♦', '♣'].freeze
 RANKS = [*(2..10), 'J', 'K', 'Q', 'A'].freeze
 
