@@ -5,7 +5,6 @@ attr_reader :cards
 
   def initialize
     @cards = Deck.build_cards
-    #create deck? or not
   end
 
   def self.build_cards
@@ -20,6 +19,4 @@ attr_reader :cards
     end
     cards.shuffle
   end
-
-
 end
