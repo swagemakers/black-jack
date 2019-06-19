@@ -1,4 +1,4 @@
-class Dealer < Main_player
+class Dealer < Player
 
   DEALER = 'DEALER'
 
