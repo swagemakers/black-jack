@@ -1,6 +1,6 @@
 require_relative "cards.rb"
 require_relative "deck.rb"
-require_relative "main_player.rb"
+require_relative "hand.rb"
 require_relative "player.rb"
 require_relative "dealer.rb"
 
