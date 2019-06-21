@@ -17,4 +17,11 @@ class Hand
       sum += card.value
     end
   end
+
+  def dealers_move(deck)
+    if value < 17
+      @dealer_hand.get_card(deck)
+      dealers_move(deck)
+    end
+  end
 end
