@@ -7,7 +7,7 @@ class Dealer < Player
   attr_reader :name
 
   def initialize(name = DEALER)
-    @name = DEALER
+    @name = name
     @value = value
     @dealer_hand = Hand.new
     super

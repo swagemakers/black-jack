@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require_relative 'cards.rb'
+require_relative 'card.rb'
 require_relative 'deck.rb'
 
 class Hand

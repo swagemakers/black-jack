@@ -9,7 +9,6 @@ class Player
     @name = name
     @bank = 100
     @value = 0
-    @cards = []
     @players_hand = Hand.new
   end
 end

@@ -12,7 +12,8 @@ attr_accessor :deck
 
   def initialize
     @deck = Deck.new
-    @name = Player.new(name)
+    create_player
+    @player = create_player
     @dealer = Dealer.new
     2.times { @players_hand.get_card(@deck) }
     2.times { @dealer_hand.get_card(@deck) }
@@ -28,8 +29,8 @@ attr_accessor :deck
 
   def create_player
     puts "Enter your name: "
-    @name = gets.chomp.to_s
-    @name = Player.new(name)
+    name = gets.chomp.to_s
+    Player.new(name)
   end
 
   def play_round

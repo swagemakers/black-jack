@@ -11,7 +11,7 @@ class Deck
 
   def self.build_cards
     cards = []
-    Card::SUIT.each do |suit|
+    Card::SUITS.each do |suit|
       Card::RANKS.each do |rank|
         cards << Card.new(suit, rank)
       end
