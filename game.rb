@@ -1,4 +1,4 @@
-require_relative "cards.rb"
+require_relative "card.rb"
 require_relative "deck.rb"
 require_relative "hand.rb"
 require_relative "player.rb"
@@ -18,7 +18,6 @@ attr_accessor :deck
     2.times { @dealer_hand.get_card(@deck) }
   end
 
-  #here comes the main loop that breaks when player chooses "No"
   def play_game
     loop do
       create_player
@@ -26,8 +25,6 @@ attr_accessor :deck
       new_round
     end
   end
-
-  #here comes the secondary loop with the main gameplay for every round
 
   def create_player
     puts "Enter your name: "
@@ -39,7 +36,7 @@ attr_accessor :deck
     loop do
       status
       show_game_options
-      open_hands
+      determine_winner
     end
   end
 
@@ -70,7 +67,7 @@ attr_accessor :deck
       case gets.to_i
       when 1 then hit!
       when 2 then stand
-      when 3 then open_hands
+      when 3 then determine_winner
       end
     end
   end
@@ -91,7 +88,7 @@ attr_accessor :deck
     @winner = determine_winner(@players_hand.points, @dealer_hand.points)
   end
 
-  def determine_winner(@players_hand.points, @dealer_hand.points)
+  def determine_winner(players_hand, dealer_hand)
     if @players_hand.points > 21 && @dealer_hand.points > 21
       puts "It's a tie"
     elsif @players_hand.points == @dealer_hand.points
@@ -105,10 +102,12 @@ attr_accessor :deck
     elsif @dealer_hand.points > @players_hand.points
       puts "Dealer has won this round"
     end
+
+    winner
   end
 
   def winner
-    winner = determine_winner
+    @winner = determine_winner(@players_hand.points, @dealer_hand.points)
     if winner
       @bank.reward_winner(winner)
       @interface.show_winner(winner)
@@ -117,7 +116,6 @@ attr_accessor :deck
       @interface.show_draw
     end
   end
-
   #interface thing
 end
 

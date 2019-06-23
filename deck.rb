@@ -1,7 +1,9 @@
-require_relative 'cards.rb'
+# frozen_string_literal: true
+
+require_relative 'card.rb'
 
 class Deck
-attr_reader :cards
+  attr_reader :cards
 
   def initialize
     @cards = Deck.build_cards

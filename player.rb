@@ -1,5 +1,5 @@
-require_relative "Hand.rb"
-require_relative "hand.rb"
+# frozen_string_literal: true
+require_relative 'hand.rb'
 
 class Player
   attr_accessor :cards, :bank, :points

@@ -1,5 +1,6 @@
-class Bank
+# frozen_string_literal: true
 
+class Bank
   attr_reader :amount
 
   def intialize

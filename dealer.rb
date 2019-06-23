@@ -1,5 +1,6 @@
-class Dealer < Player
+# frozen_string_literal: true
 
+class Dealer < Player
   DEALER = 'DEALER'
 
   attr_accessor :cards, :bank, :points
