@@ -9,12 +9,9 @@ attr_reader :cards
 
   def self.build_cards
     cards = []
-    SUIT.each do |suit|
-      (2..10).each do |number|
-        cards << Cards.new(suit, number)
-      end
-      ["J", "Q", "K", "A"].each do |facecard|
-        cards << Cards.new(suit, facecard)
+    Card::SUIT.each do |suit|
+      Card::RANKS.each do |rank|
+        cards << Card.new(suit, rank)
       end
     end
     cards.shuffle
