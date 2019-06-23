@@ -37,7 +37,9 @@ attr_accessor :deck
 
   def play_round
     loop do
-      #game goes in here
+      status
+      show_game_options
+      open_hands
     end
   end
 
@@ -55,6 +57,29 @@ attr_accessor :deck
   def show_options
     puts "1 - Play a new round"
     puts "0 - Quit"
+  end
+
+  def status
+    puts "#{name} cards and value are: #{@player.cards}, #{@hand.points}"
+  end
+
+  def show_game_options
+    loop do
+      options_description
+
+      case gets.to_i
+      when 1 then hit!
+      when 2 then stand
+      when 3 then open_hands
+      end
+    end
+  end
+
+  def options_description
+
+    puts "1 - Get a card"
+    puts "2 - Stand"
+    puts "3 - Open hands"
   end
 
   def hit!
@@ -94,9 +119,5 @@ attr_accessor :deck
   end
 
   #interface thing
-
-  def status
-    puts "#{name} cards and value are: #{@player.cards}, #{@hand.points}"
-  end
 end
 

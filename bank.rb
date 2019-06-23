@@ -2,19 +2,17 @@ class Bank
 
   attr_reader :amount
 
-  def initialize
+  def intialize
     @amount = 100
   end
 
-  def bet(*players)
-
+  def debit(amount)
+    amount
   end
 
-  def reward_winner(player)
-
-  end
-
-  def refund(*players)
-
+  def withdraw(amount)
+    amount
+    amount -= 10
+    amount
   end
 end

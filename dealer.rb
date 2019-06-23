@@ -8,7 +8,7 @@ class Dealer < Player
   def initialize(name = DEALER)
     @name = DEALER
     @value = value
-    @dealers_hand = Hand.new
+    @dealer_hand = Hand.new
     super
   end
 end
