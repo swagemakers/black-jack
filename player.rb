@@ -1,4 +1,5 @@
 require_relative "Hand.rb"
+require_relative "hand.rb"
 
 class Player
   attr_accessor :cards, :bank, :points
