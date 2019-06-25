@@ -7,12 +7,16 @@ class Player
 
   def initialize(name)
     @name = name
-    @amount = 100
+    @bank = 100
     @value = 0
     @players_hand = Hand.new
   end
 
-  def status
-    puts "#{bankq}"
+  def debit(amount)
+    @bank += amount
+  end
+
+  def withdraw(amount)
+    @bank -= amount
   end
 end
