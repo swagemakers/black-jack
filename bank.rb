@@ -4,12 +4,10 @@ class Bank
   attr_reader :amount
 
   def debit(amount)
-    amount
+    @bank += amount
   end
 
   def withdraw(amount)
-    amount
-    amount -= 10
-    amount
+    @bank -= amount
   end
 end

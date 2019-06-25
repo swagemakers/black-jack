@@ -3,7 +3,7 @@ require_relative 'bank.rb'
 class GameBank < Bank
 
   def initialize
-    @reserved_money = bet
+    @reserved_money = 0
   end
 
   def bet(*players)
@@ -11,8 +11,8 @@ class GameBank < Bank
 
   end
 
-  def reward_winner(player)
-
+  def reward_winner(winner)
+    @winner.
   end
 
   def refund(*players)
