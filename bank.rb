@@ -1,11 +1,7 @@
 # frozen_string_literal: true
-
+require_relative 'player.rb'
 class Bank
   attr_reader :amount
-
-  def intialize
-    @amount = 100
-  end
 
   def debit(amount)
     amount

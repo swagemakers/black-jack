@@ -5,8 +5,8 @@ require_relative "player.rb"
 require_relative "dealer.rb"
 
 class Game
-attr_reader :players_hand, :dealer_hand
-attr_accessor :deck
+attr_reader :cards, :bank, :points
+attr_accessor :deck, :players_hand, :dealer_hand
 
   DEF_BET = 10
 
@@ -15,8 +15,6 @@ attr_accessor :deck
     create_player
     @player = create_player
     @dealer = Dealer.new
-    2.times { @players_hand.get_card(@deck) }
-    2.times { @dealer_hand.get_card(@deck) }
   end
 
   def play_game
@@ -35,6 +33,7 @@ attr_accessor :deck
 
   def play_round
     loop do
+      first_cards
       status
       show_game_options
       determine_winner
@@ -59,6 +58,11 @@ attr_accessor :deck
 
   def status
     puts "#{name} cards and value are: #{@player.cards}, #{@hand.points}"
+  end
+
+  def first_cards
+    2.times { @players_hand.get_card(@deck) }
+    2.times { @dealer_hand.get_card(@deck) }
   end
 
   def show_game_options
@@ -117,6 +121,5 @@ attr_accessor :deck
       @interface.show_draw
     end
   end
-  #interface thing
 end
 

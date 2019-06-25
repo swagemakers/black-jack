@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+require_relative 'hand.rb'
 
 class Dealer < Player
   DEALER = 'DEALER'
@@ -8,7 +9,8 @@ class Dealer < Player
 
   def initialize(name = DEALER)
     @name = name
-    @value = value
+    @bank = 100
+    @value = 0
     @dealer_hand = Hand.new
     super
   end

@@ -2,6 +2,8 @@
 
 require_relative 'card.rb'
 require_relative 'deck.rb'
+require_relative 'player.rb'
+require_relative 'dealer.rb'
 
 class Hand
   attr_reader :points, :cards
