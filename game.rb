@@ -8,13 +8,13 @@ class Game
 attr_reader :cards, :bank, :points
 attr_accessor :deck, :players_hand, :dealer_hand
 
-  DEF_BET = 10
+  DEALER = 'Dealer'
 
   def initialize
     @deck = Deck.new
-    create_player
+    play_game
     @player = create_player
-    @dealer = Dealer.new
+    @dealer = Dealer.new(DEALER)
   end
 
   def play_game
@@ -62,7 +62,7 @@ attr_accessor :deck, :players_hand, :dealer_hand
 
   def first_cards
     2.times { @players_hand.get_card(@deck) }
-    2.times { @dealer_hand.get_card(@deck) }
+    2.times { @hand.get_card(@deck) }
   end
 
   def show_game_options

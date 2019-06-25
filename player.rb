@@ -8,7 +8,6 @@ class Player
   def initialize(name)
     @name = name
     @bank = 100
-    @value = 0
     @players_hand = Hand.new
   end
 
@@ -18,5 +17,9 @@ class Player
 
   def withdraw(amount)
     @bank -= amount
+  end
+
+  def new_card
+    @hand.get_card
   end
 end

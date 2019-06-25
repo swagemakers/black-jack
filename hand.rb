@@ -9,11 +9,12 @@ class Hand
   attr_reader :points, :cards
 
   def initialize
-    @cards = []
+    @cards_in_hand = []
+    @points = points
   end
 
-  def get_card(deck)
-    @cards << deck.cards.pop
+  def get_card(deck) #nope
+    @cards_in_hand << @deck.deal_card
   end
 
   def points
