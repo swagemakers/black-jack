@@ -61,8 +61,8 @@ attr_accessor :deck, :players_hand, :dealer_hand
   end
 
   def first_cards
-    2.times { @players_hand.get_card(@deck) }
-    2.times { @hand.get_card(@deck) }
+    2.times { @player.new_card(@deck) }
+    2.times { @dealer.new_card(@deck) }
   end
 
   def show_game_options

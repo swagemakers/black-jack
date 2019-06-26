@@ -17,11 +17,11 @@ class Hand
     @cards_in_hand << @deck.deal_card
   end
 
-  def points
-    cards.inject(0) do |sum, card|
-      sum += card.value
-    end
-  end
+ # def points
+ #   cards.inject(0) do |sum, card|
+ #     sum += card.value
+ #   end
+ # end
 
   def dealers_move(deck)
     if value < 17
