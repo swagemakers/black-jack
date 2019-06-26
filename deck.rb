@@ -19,7 +19,7 @@ class Deck
     cards.shuffle
   end
 
-  def deal_card #nope
+  def deal_card(cards) #nope
     @cards.pop
   end
 end

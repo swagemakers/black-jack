@@ -19,7 +19,7 @@ class Player
     @bank -= amount
   end
 
-  def new_card
-    @hand.get_card
+  def new_card #for nil class
+    @players_hand.get_card
   end
 end

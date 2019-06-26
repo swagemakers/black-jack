@@ -9,7 +9,6 @@ class Dealer < Player
   def initialize(name = 'Dealer')
     @name = name
     @bank = 100
-    @value = 0
     @dealer_hand = Hand.new
     super
   end

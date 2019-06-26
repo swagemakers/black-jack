@@ -60,9 +60,9 @@ attr_accessor :deck, :players_hand, :dealer_hand
     puts "#{name} cards and value are: #{@player.cards}, #{@hand.points}"
   end
 
-  def first_cards
-    2.times { @player.new_card(@deck) }
-    2.times { @dealer.new_card(@deck) }
+  def first_cards #problem occures from the deck itself
+    2.times { @player.new_card }
+    2.times { @dealer.new_card }
   end
 
   def show_game_options

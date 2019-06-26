@@ -13,7 +13,7 @@ class Hand
     @points = points
   end
 
-  def get_card(deck) #nope
+  def get_card #nope
     @cards_in_hand << @deck.deal_card
   end
 
