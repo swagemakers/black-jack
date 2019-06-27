@@ -6,7 +6,7 @@ require_relative "dealer.rb"
 
 class Game
 attr_reader :cards, :bank, :points
-attr_accessor :deck, :players_hand, :dealer_hand
+attr_accessor :deck
 
   DEALER = 'Dealer'
 
@@ -61,8 +61,8 @@ attr_accessor :deck, :players_hand, :dealer_hand
   end
 
   def first_cards #problem occures from the deck itself
-    2.times { @player.new_card(@deck) }
-    2.times { @dealer.new_card(@deck) }
+    2.times { @player.new_card(cards) }
+    2.times { @dealer.new_card(cards) }
   end
 
   def show_game_options

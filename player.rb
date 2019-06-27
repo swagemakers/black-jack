@@ -8,7 +8,7 @@ class Player
   def initialize(name)
     @name = name
     @bank = 100
-    @players_hand = Hand.new
+    @hand = Hand.new
   end
 
   def debit(amount)
@@ -19,7 +19,7 @@ class Player
     @bank -= amount
   end
 
-  def new_card #for nil class
-    @players_hand.get_card
+  def add_card(card) #for nil class
+    @hand.add_card(card)
   end
 end
